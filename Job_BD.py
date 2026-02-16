@@ -1109,3 +1109,4 @@ Grid.rowconfigure(janelaPrincipal, 5, weight = 1)
 Grid.rowconfigure(janelaPrincipal, 6, weight = 1)
 
 janelaPrincipal.mainloop()
+
