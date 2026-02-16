@@ -202,7 +202,7 @@ CREATE TABLE IF NOT EXISTS Registros_Atividade_Navios (
     ON UPDATE CASCADE);
 
 
---FUNÇÃO para leitura de arquivo no formato bytea, passando como parâmetro um diretório de acesso comum.
+--FUNCTION para leitura de arquivo no formato bytea, passando como parâmetro um diretório de acesso comum.
 
  create or replace function bytea_import(p_path text, p_result out bytea) 
                        language plpgsql as $$
@@ -214,7 +214,7 @@ CREATE TABLE IF NOT EXISTS Registros_Atividade_Navios (
       perform lo_unlink(l_oid);
     end;$$;
 
---CRIAÇÃO DE UMA VIEW PARA MOSTRAR A ORIGEM E O LOCAL DE UM CONTAINER
+--CREATION OF A VIEW TO SHOW THE ORIGIN AND LOCATION OF A CONTAINER
 
 
 CREATE VIEW vw_container_area_navio AS 
@@ -223,7 +223,7 @@ FROM container c, area a, navio
 WHERE c.navio_codigo_navio = navio.codigo_navio and c.area_codigo_espaco_para_container = a.codigo_espaco_para_container
 
 
---CRIAÇÃO DE PROCEDURE PARA CONSULTAR EXPERIÊNCIA DE FUNCIONÁRIO
+--CREATION OF A PROCEDURE TO CHECK EMPLOYEE EXPERIENCE
 
 
 CREATE OR REPLACE PROCEDURE proc_experiencia_func(numeric)
