@@ -101,3 +101,4 @@ INSERT INTO empilhadeira VALUES(5,'Bost','Mercedes', 100000,400,'28/11/2021',6);
 
 
 
+
